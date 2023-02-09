@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
+    #    url: jdbc:mysql://localhost:3306/henan-trade?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=CTT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      connection-timeout: 300000
+      minimum-idle: 2
+      maximum-pool-size: 50
+      auto-commit: true
+      pool-name: DatebookHikariCP
+
+mybatis-plus:
+  mapper-locations: classpath:/com/jike/demo/mapper/*Mapper.xml
+  type-aliases-package: com.jike.demo.pojo
